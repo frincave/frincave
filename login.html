@@ -7,22 +7,24 @@
     .border {
       background-color: lightblue;    
       text-align: center;
-      width: 380px; height: 300px;
+      width: 380px; height: 400pxpx;
       margin: 50px auto;
-      border: 10px solid #000000;
+      border: 8px solid #000000;
+      border-radius: 30px;
     }
-     a{
-               background: #00AFAF;
+     a.back{
+               background: blue;
                border-color: #000000;
+               border-radius: 20px;
                border-style: solid;
-               colour: #fff;
+               color: #fff;
                font-size: 20px;
                font-weight: bold;
-               letter-spacing: 2px;
                height: 40px;
-               margin-top: 20px;
+               width: 100px;
+               margin-top: 30px;
     }
-    a:hover {
+    a.back:hover {
       
       background-color: yellow;
       cursor: pointer;
@@ -36,12 +38,61 @@
     }
     </style>
     <style>
+    input.inp{
+       height: 30px;
+       width: 300px;
+       border: transparent;
+       border-style: none;
+       border-bottom: 2px solid black;
+       background-color: transparent;
+      margin-top: 4%;
+      margin-left: 20px;
+
+    }
+
+    input.gender{
+       margin-top: 5%;
+       margin-left: 5%;
+
+
+    }
+    select.loo{
+      border-style: none;
+      border: transparent;
+      border-bottom: 2px solid black;
+      height: 20px;
+      width: 30px;
+    
+    }
+    input.reset{
+     height: 40px;
+     width: 100px;
+     margin-left: 70px;
+     background-color: green;
+     font-size: 20px;
+     border-radius: 10px;
+} 
+
+::placeholder{
+   color:#000000;
+   font: 10px;
+
+}
+
+input.reset:hover{
+   background-color: #00AFAF;
+   cursor: pointer;
+
+}
+
+
         h1{
                    background-color:DodgerBlue;
                    border-radius: 50px;
                    height: 50px;
                    width: 180px;
                    text-align: center; 
+                   border-style: solid;
                    border-color: black;  
   }
     </style>
@@ -84,49 +135,45 @@
      <form method="post" class="contact-form">
       <table style="float:center">
         <tr>
-        <td>Full Name :</td>
+        <td></td>
         <td>
-         <select>
-          <option>Mr</option>
-          <option>Mrs</option>
-         </select>
-         <input type="text" class="name" placeholder="Your Name" required>
+         <input type="text" class="inp" placeholder="Your Name" required>
         </td>
        </tr>
        <tr>
-        <td>Username :</td>
-        <td><input type="text" class="username" placeholder="Your Username" required></td>
-       </tr>
-       <tr>
-        <td>Password :</td>
-        <td><input type="password" class="password" placeholder="Type password" required></td>
-       </tr>
-       <tr>
-        <td>Conform it :</td>
-        <td><input type="password" placeholder="conform password"></td>
-       </tr>
-       <tr>
-        <td>Gender :</td>
-    <div class="radio">
-       <td>
-          <input type="radio" class="gender" name="gender">Male</input>
-          <input type="radio" class="gender" name="gender">Female</input>
-          <input type="radio" class="gender" name="gender">Rather not to say</input>
-        </td></div>
-       </tr>
-       <tr>
-        <td>Email :</td>
-        <td><input type="email" class="email" placeholder="your e-mail" required></td>
+        <td></td>
+        <td><input type="text" class="inp" placeholder="Your Username" required></td>
        </tr>
        <tr>
         <td></td>
-        <td><input type="submit" class="form-control submit" value="Register"></td>
+        <td><input type="password" id="pw" class="inp" placeholder="Type password" required></td>
+       </tr>
+       <tr>
+        <td></td>
+        <td><input type="password" id="pw" class="inp" placeholder="conform password"></td>
+       </tr>
+       <tr>
+        <td></td>
+    <div class="radio">
+       <td>
+          <input type="radio" class="gender" name="gender" >Male</input>
+          <input type="radio" class="gender" name="gender">Female</input>
+          <input type="radio" class="gender" name="gender">others</input>
+        </td></div>
+       </tr>
+       <tr>
+        <td></td>
+        <td><input type="email" class="inp" placeholder="your e-mail" required></td>
+       </tr>
+       <tr>
+        <td></td>
+        <td><input type="submit" class="form-control submit" value="Register"><input type="reset" class="reset"></input></td>
         <td></td>
        </tr>
       </table>
      </form>
     <h2>
-      <a href="index.html" style="text-decoration: none;"> Go back to home </a></div></h2>
+      <a href="index.html" class="back" style="text-decoration: none;"> Go back to home </a></div></h2>
     </center>
     </body>
   <script src=
